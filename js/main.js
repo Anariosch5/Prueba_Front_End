@@ -1,10 +1,10 @@
-// ---VARIABBLES--
+// ---VARIABLES--
 const base_url = "https://api.shrtco.de/v2/";
 const btn = document.getElementById('btn');
 const urlInput = document.getElementById('url');
 const resultDiv = document.getElementById('result')
 
-// ---------FETCH-------
+// -FETCH--
 const fetchData = async(endpoint) =>{
     const webAdd = `${base_url}${endpoint}`;
     let response =  await fetch(webAdd);
@@ -12,7 +12,7 @@ const fetchData = async(endpoint) =>{
     return response.result; 
 }
 
-// --------MENU MOBILE-------
+//-MENU MOBILE-
 const menuContainer = document.getElementById("nav__menu");
 const openMenu = () => {
     if(menuContainer.classList.contains("nav_open")){
@@ -24,16 +24,20 @@ const openMenu = () => {
 
 // -----------ACORTAR URL--------------
 const submitListener = async(e) => {
-    try{
-        const value = urlInput.value
-        btn.innerHTML ="Loading...";
-        const response  = await fetchData("shorten?url="+ value);
-        formatResult(response.short_link3, value)
-        urlInput.value = "";
-    }catch(e){
-        throw new Error(e.message)
-    }finally{
-        btn.innerHTML ="Shorten It!";
+    if(urlInput.value == ''){
+        alert('Por favor llenar los campos')
+    }else{
+        try{
+            const value = urlInput.value
+            btn.innerHTML ="Loading...";
+            const response  = await fetchData("shorten?url="+ value);
+            formatResult(response.short_link3, value)
+            urlInput.value = "";
+        }catch(e){
+            throw new Error(e.message)
+        }finally{
+            btn.innerHTML ="Shorten It!";
+        }
     }
 }
 // ------MOSTRAR RESULTADO-----
