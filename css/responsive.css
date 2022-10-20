@@ -1,0 +1,118 @@
+@media(max-width: 550px){
+    .toggle_menu{
+        display: block;
+        font-size: 3.0rem;
+        color: var(--gray);
+    }
+    .nav{
+        justify-content: space-between;
+        
+    }
+    .nav__menu{
+        width: auto;
+        flex: 0;
+        position: absolute;
+        top: -90vh;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .nav_open{
+        padding: 6em 2em;
+        background-color: var(--dark-violet);
+        width: 90%;
+        top: 6em;
+        border-radius: .8em;
+    }
+    .nav_open>.nav__menu-list{
+        flex-direction: column;
+    }
+    .nav_open>.nav__menu-list > li:nth-child(4){
+        margin-left: 0;
+        position: relative;
+    }
+    .nav_open>.nav__menu-list > li:nth-child(4)::before{
+        position: absolute;
+        top: -1em;
+        content:"";
+        width: 100%;
+        left: 0;
+        height: .3px;
+        background-color: var(--white);
+    }
+    .nav_open>.nav__menu-list > li{
+        width: 100%;
+        text-align: center;
+    }
+    .nav_open>.nav__menu-list > li> a{
+        font-size: 1.8rem;
+        color: var(--white);
+    }
+    .grid-2, .grid-3, .grid-5, .search-box > .grid-2{
+        grid-template-columns: 1fr;
+    }
+    .search-box > .grid-2{
+        gap: .2em;
+      
+    }
+    .grid-5{
+        text-align: center;
+    }
+    .card:nth-child(1)::after, .card:nth-child(2)::before{
+        height: 100%;
+        width: .7em;
+        top: 100%;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .circle{
+        left: 50%;
+        transform: translateX(-50%);
+        top: -2em;
+    }
+    .circle img{
+        height: 2em;
+    }
+    .card{
+        text-align: center;
+    }
+    .card:nth-child(2), .card:nth-child(3){
+        margin-top: 3em;
+    }
+    .social ul{
+        justify-content: center;
+    }
+    .boost{
+        background-image: url('../images/bg-boost-mobile.svg');
+        background-position:left center;
+    }
+    .search-box{
+        width: 90%;
+        height: 12em;
+        bottom: -6em ;
+        background-image: url('../images/bg-shorten-mobile.svg');
+        background-position:bottom right ;
+    }
+
+    .search-box > .grid-2  a{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .hero .grid-2{
+        grid-template-areas: "picture" "text";
+        text-align: center;
+        gap: .4em;
+    }
+    .hero__detail{
+        grid-area: text;
+    }
+    .hero__detail > p{
+        max-width: 100%;
+        margin-top: 0.8em;
+        margin-bottom: 2.2em;
+    }
+    .hero_image{
+        grid-area: picture;
+    }
+}
+

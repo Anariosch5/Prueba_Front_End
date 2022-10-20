@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-  <link rel="stylesheet" href="./css/styles.css">
-  
+  <link rel="stylesheet" href="./css/styles.css" >
+  <link rel="stylesheet" href="./css/responsive.css">
+
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
+  <!-- NAVIGATION MENU -->
   <header>
       <nav class="nav flex container">
-          <a href="#" class="logo">
+          <a href="#" class="nav__logo">
               <img src="./images/logo.svg" alt="">
           </a>
           <div id="nav__menu" class="nav__menu">
@@ -38,16 +39,16 @@
           </div>
       </nav>
   </header>
-  <!-- WELCOME-->
+  <!-- HERO SECTION -->
   <section class="hero">
       <div class="container grid grid-2">
-          <div class="welcome">
+          <div class="hero__detail">
               <h1>More than just shorter links</h1>
               <p>Build your brand’s recognition and get detailed insights 
                   on how your links are performing.</p>
               <a href="#" class="btn btn--cyan">Get Started</a>
           </div>
-          <div class="work">
+          <div class="hero__image">
               <img src="./images/illustration-working.svg" alt="Workaholic">
           </div>
       </div>
@@ -62,8 +63,8 @@
           </div>
       </div>
   </section>
-  <!-- Estadisticas -->
-  <section class="estadisticas">
+  <!-- Advanced statistics -->
+  <section class="statistics">
       <div id="result" class="result container"></div>
       <div class="container"> 
           <div class="adv text-center">
@@ -100,13 +101,12 @@
           </div>
       </div>
   </section>
-  <!-- CAll ACTION -->
+  <!-- BOOST YOUR LINK -->
   <section class="boost text-center">
       <h2>Boost your links today</h2>
       <a href="#" class="btn btn--cyan">Get Started</a>
   </section>
-
-  <!-- Footer -->
+  <!-- Footer area -->
   <footer>
       <div class="container">
           <div class="grid grid-5">
